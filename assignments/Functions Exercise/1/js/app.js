@@ -1,3 +1,5 @@
+//Nina Griger, n220, 2-2-23
+
 // Drawing Drawer
 
 //setup canvas (800x800)

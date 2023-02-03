@@ -1,3 +1,5 @@
+//Nina Griger, n220, 2-2-23
+
 //Red Remover
 
 //introduce color variable

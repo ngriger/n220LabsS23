@@ -1,3 +1,5 @@
+//Nina Griger, n220, 2-2-23
+
 //Polar Points
 
 //setup canvas (800x800)
