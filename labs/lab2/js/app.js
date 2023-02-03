@@ -1,4 +1,4 @@
-let cursor = {x: 0, y: 0}; //Change } to ), x: and y: indicators not needed, Rename "aou" to something useful
+let cursor = {x: 0, y: 0}; //rename "aou" to something useful
 
 function setup() {
   createCanvas(400, 400);
