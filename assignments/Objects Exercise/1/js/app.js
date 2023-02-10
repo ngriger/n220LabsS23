@@ -1,3 +1,5 @@
+//Nina Griger, 2-9-23, N220
+
 //Data-driven display w/ function
 
 //create object with properties
@@ -7,24 +9,28 @@
 //function using object argument
     //function drawObject(object)
     //draw the object to the screen
-function setup(){
-        createCanvas(800,800);
-    }
 
 let boxObject = {
     width: 40,
     height: 40,
     x: 100,
     y: 100,
-    color: (143, 94, 166)
+    c: '',
+}
+
+function setup(){
+    createCanvas(800,800);
+    boxObject.c = color(143, 94, 166);
 }
 
 function drawBox(boxObject){
-    fill(boxObject.color)
-    rect(boxObject.x, boxObject.y, boxObject.width, boxObject.height)
+    fill(boxObject.c);
+    rect(boxObject.x, boxObject.y, boxObject.width, boxObject.height);
 }
 
-
+function draw() {
+    drawBox(boxObject);
+}
 
 console.log(boxObject)
 
