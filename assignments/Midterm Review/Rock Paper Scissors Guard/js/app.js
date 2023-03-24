@@ -1,17 +1,16 @@
 //create global variables
 
 let playerScore = 0;
-let computerScore = 0;
 let playerChoice = "";
 let computerChoice = "";
 let computerNumber = "";
 
-//link and style divs (this cant be fucking right)
+//link and style divs
 
 let displayChoice = document.getElementById("choice")
         displayChoice.innerHTML = ""
 let displayScore = document.getElementById("score")
-        displayScore.innerHTML = ""
+        displayScore.innerHTML = "Your current score is " + playerScore
 let choiceRock = document.getElementById("rock")
         choiceRock.style.backgroundColor = "red"
         choiceRock.innerHTML = "Rock"
@@ -41,40 +40,71 @@ function rockClick() {
     computerNumber = Math.floor(Math.random() * 3)
     if (computerNumber == 0) {
         computerChoice = "Rock"
+        playerScore = playerScore
     }
     if (computerNumber == 1) {
         computerChoice = "Paper"
+        playerScore = playerScore - 1
     }
     if (computerNumber == 2) {
         computerChoice = "Scissors"
+        playerScore = playerScore + 1
     }
-    console.log(computerChoice)
+    displayChoice.innerHTML = "You chose Rock. The computer chose " + computerChoice
+    displayScore.innerHTML = "Your current score is " + playerScore
+
 }
 
 function paperClick() {
     computerNumber = Math.floor(Math.random() * 3)
     if (computerNumber == 0) {
         computerChoice = "Rock"
+        playerScore = playerScore + 1
     }
     if (computerNumber == 1) {
         computerChoice = "Paper"
+        playerScore = playerScore
     }
     if (computerNumber == 2) {
         computerChoice = "Scissors"
+        playerScore = playerScore - 1
     }
-    console.log(computerChoice)
+    displayChoice.innerHTML = "You chose Paper. The computer chose " + computerChoice
+    displayScore.innerHTML = "Your current score is " + playerScore
 }
 
 function scissorsClick() {
     computerNumber = Math.floor(Math.random() * 3)
     if (computerNumber == 0) {
         computerChoice = "Rock"
+        playerScore = playerScore - 1
     }
     if (computerNumber == 1) {
         computerChoice = "Paper"
+        playerScore = playerScore + 1
     }
     if (computerNumber == 2) {
         computerChoice = "Scissors"
+        playerScore = playerScore
     }
-    console.log(computerChoice)
+    displayChoice.innerHTML = "You chose Scissors. The computer chose " + computerChoice
+    displayScore.innerHTML = "Your current score is " + playerScore
+}
+
+function guardClick(){
+    computerNumber = Math.floor(Math.random() * 3)
+    if (computerNumber == 0) {
+        computerChoice = "Rock"
+        playerScore = playerScore - 0.5
+    }
+    if (computerNumber == 1) {
+        computerChoice = "Paper"
+        playerScore = playerScore - 0.5
+    }
+    if (computerNumber == 2) {
+        computerChoice = "Scissors"
+        playerScore = playerScore - 0.5
+    }
+    displayChoice.innerHTML = "You chose Guard. The computer chose " + computerChoice
+    displayScore.innerHTML = "Your current score is " + playerScore
 }
