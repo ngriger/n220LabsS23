@@ -21,17 +21,23 @@ let colorBox = document.getElementById("colorBox")
     colorBox.style.width = 500
     colorBox.style.backgroundColor = "rgb("+r+", "+g+", "+b+")"
 
+let colorDisplay = document.getElementById("colorDisplay")
+    colorDisplay.innerHTML = "Current Color: rgb("+r+", "+g+", "+b+")"
+
 function changeRed(event){
     r = r + Number(event.target.getAttribute("data-value"))
     colorBox.style.backgroundColor = "rgb("+r+", "+g+", "+b+")"
+    colorDisplay.innerHTML = "Current Color: rgb("+r+", "+g+", "+b+")"
 }
 
 function changeGreen(event){
     g = g + Number(event.target.getAttribute("data-value"))
     colorBox.style.backgroundColor = "rgb("+r+", "+g+", "+b+")"
+    colorDisplay.innerHTML = "Current Color: rgb("+r+", "+g+", "+b+")"
 }
 
 function changeBlue(event){
     b = b + Number(event.target.getAttribute("data-value"))
     colorBox.style.backgroundColor = "rgb("+r+", "+g+", "+b+")"
+    colorDisplay.innerHTML = "Current Color: rgb("+r+", "+g+", "+b+")"
 }
