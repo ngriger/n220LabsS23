@@ -19,7 +19,7 @@
 
 let colorOptions = ["red", "red", "orange", "orange", "yellow", "yellow", "green", "green", "teal", "teal", "blue", "blue", "purple", "purple", "pink", "pink"]
 let container = document.getElementById("container")
-let clickCounter = 0
+//let clickCounter = 0
 let firstColor = ""
 let firstBox = ""
 let colorMatch = ""
@@ -27,7 +27,7 @@ let correctPairs = 0
 
 //styling the squares and creating the color data
 for (i = 0; i < 16; i++) {
-    let colorChoice = Math.floor(Math.random() * colorOptions.length)
+    let colorChoice = Math.floor(Math.random() * colorOptions.length) //generate a random number to represent a color from the array
     
     let box = document.createElement("div")
         box.style.height = 100
@@ -35,10 +35,9 @@ for (i = 0; i < 16; i++) {
         box.style.margin = 5
         box.style.backgroundColor = "#7d7d7d"
 
-        box.dataset.hiddenColor = colorOptions[colorChoice]
+        box.dataset.hiddenColor = colorOptions[colorChoice] //asigning the random color to the data of the box
         //box.innerHTML = colorOptions[colorChoice]
-        box.dataset.boxFlipped = false
-        colorOptions.splice(colorChoice, 1)
+        colorOptions.splice(colorChoice, 1) //removing the assigned color from the array
         box.addEventListener("click", colorClick)
 
     container.appendChild(box)
@@ -51,7 +50,7 @@ for (i = 0; i < 16; i++) {
 //general function that is run whenever a box is clicked
 function colorClick(event) {
     let revealedColor = event.target.getAttribute("data-hidden-color")
-    clickCounter += 1
+    //clickCounter += 1
     // console.log(clickCounter)
     // console.log(revealedColor)
     event.target.style.backgroundColor = revealedColor
